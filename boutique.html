@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/projet3/boutique.css">
+</head>
+<body onload="duplique();">
+    <div class="header">Ma boutique en ligne</div>
+    <section>
+        <div class="nom_produit">
+            <div class="produit">
+                <img src="/projet3/img/th (1).jpg" alt="">
+            </div>
+            <div class="propriete"><p> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Veniam commodi explicabo ipsum iure corporis repellat.</p></div>
+ 
+        </div>
+    </section>
+    <script>
+        function duplique(){
+    var nom_produit=document.getElementsByClassName("nom_produit");
+    const produit =document.getElementsByClassName("produit");
+    for (var i=0;i<4;i++){
+        var dup = produit[0].cloneNode(true);
+        nom_produit[0].appendChild(dup);
+    }
+}
+</script>
+</body>
+</html>
